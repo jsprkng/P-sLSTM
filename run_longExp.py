@@ -42,6 +42,9 @@ parser.add_argument('--conv1d_kernel_size', type=int, default=4, help='conv1d ke
 parser.add_argument('--group_norm_weight', type=bool, default=True, help='group normalization weight')
 parser.add_argument('--dropout', type=float, default=0.05, help='dropout rate')
 parser.add_argument('--num_blocks', type=int, default=2, help='number of blocks')
+parser.add_argument('--backend', type=str, default='vanilla', help='sLSTM backend: vanilla (pure PyTorch, CPU) or cuda (compiled kernel)')
+parser.add_argument('--t_layers', type=int, default=2, help='Transformer encoder layers (T_sLSTM)')
+parser.add_argument('--t_heads', type=int, default=4, help='Transformer attention heads (T_sLSTM)')
 
 # Parameter for patches
 parser.add_argument('--patch_size', type=int, default=16, help='Size of the patches for the time series')

@@ -1,0 +1,2 @@
+# Keep shell scripts LF on every checkout; CRLF breaks bash line continuations.
+*.sh text eol=lf

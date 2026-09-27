@@ -28,7 +28,8 @@ class Model(nn.Module):
             #                            qkv_proj_blocksize=4, num_heads=configs.num_heads)
             # ),
             slstm_block=sLSTMBlockConfig(
-                slstm=sLSTMLayerConfig(num_heads=configs.num_heads, 
+                slstm=sLSTMLayerConfig(backend=configs.backend,
+                                       num_heads=configs.num_heads, 
                                        conv1d_kernel_size=configs.conv1d_kernel_size,
                                        bias_init="powerlaw_blockdependent"),
                 feedforward=FeedForwardConfig(proj_factor=1.3, act_fn="gelu"),
